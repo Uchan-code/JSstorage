@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSの保管庫</title>
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <h1>JavaScriptを試したい</h1>
+        </div>
+    </header>
 
+    <!-- main -->
+    <div class="main">
+        <!-- CSS grid Area -->
+        <div class="gallery">
+            <div class="gallery-wrapper">
+                <img date-modalwindow="example" src="./images/test-image-wool.jpg" alt="wool">
+                <img date-modalwindow="example" src="./images/test-image-man.jpg" alt="man">
+                <img date-modalwindow="example" src="./images/test-image-spring.jpg" alt="spring">
+            </div>
+        </div>
+
+    </div>
+
+    <button class="test-button">テストボタン</button>
+
+    <div class="mw" id="modalwindow">
+        <div class="mw-wrapper">
+                <div class="mw-container">
+                    <img id="mw-image" src="" alt="">
+                    <div class="mw-main"></div>
+                    <div class="mw-nav"></div>
+                    <div class="mw-loader"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <p>JavaScriptを試した</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js" defer></script>
+    <script src="./js/lightbox.js" defer></script>
+</body>
+</html>
