@@ -1,10 +1,12 @@
+@charset "UTF-8";
 .mw {
   position: fixed;
   top: 0;
   left: 0;
 }
 
-.mw-wrapper {
+.mw-overlay {
+  position: absolute;
   width: 0px;
   height: 0px;
   background-color: #000000;
@@ -22,9 +24,51 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  z-index: 998;
 }
 
-.mw-main {
-  background-color: aqua;
+.mw-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.mw-container img {
+  -webkit-animation: fadeIn 0.8s;
+          animation: fadeIn 0.8s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  z-index: 999;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*メモ
+1.モーダルウィンドウ欄とイメージ欄は別にしないとイメージもopacity:0.8になる
+*/
 /*# sourceMappingURL=lightbox.css.map */

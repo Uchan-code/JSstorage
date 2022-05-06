@@ -3,7 +3,8 @@ console.log('load');
 const testBtn = document.querySelector('.test-button')
 
 // モーダルウィンドウの取得
-const mwWrapper = document.querySelector('.mw-wrapper');
+const mwOverlay = document.querySelector('.mw-overlay');
+const mwContainer = document.querySelector('.mw-container');
 // ブラウザサイズの取得
 const windowInnerWidth = window.innerWidth;
 const windowInnerHeight = window.innerHeight;
@@ -13,31 +14,42 @@ const mwImage = document.getElementById('mw-image')
 const dateMw = document.querySelectorAll('[date-modalwindow]')
 
 function clickEvent(){
-    mwWrapper.style.width = `${windowInnerWidth}px`;    // モーダルウィンドウへブラウザサイズを適用
-    mwWrapper.style.height = `${windowInnerHeight}px`;
-    mwWrapper.style.opacity = '0.8';    // opacityの変更
+    mwOverlay.style.width = `${windowInnerWidth}px`;    // モーダルウィンドウへブラウザサイズを適用
+    mwOverlay.style.height = `${windowInnerHeight}px`;
+    mwOverlay.style.opacity = '0.8';    // opacityの変更
+
+    mwContainer.style.width = `${windowInnerWidth}px`;
+    mwContainer.style.height = `${windowInnerHeight}px`
 }
 
 function getImage(element){
-    console.log('click')
     // img要素からimg-urlを取得する
     let imageSorce = element.path[0].src;
     // 取得したimg-urlをmw-container→imgにネストする
     mwImage.src = imageSorce
-    console.log(imageSorce,mwImage)
+    console.log()
+    if(windowInnerWidth < element.path[0].naturalWidth){
+        mwImage.width = windowInnerWidth*0.8;
+    }
 };
 
 // 再度クリックによってモーダルウィンドウを閉じる
 
 function clickCloseEvent(){
-    mwWrapper.style.width = `0px`;    // モーダルウィンドウへブラウザサイズを適用
-    mwWrapper.style.height = `0px`;
-    mwWrapper.style.opacity = '0'; 
+    mwOverlay.style.width = `0px`;    // モーダルウィンドウへブラウザサイズを適用
+    mwOverlay.style.height = `0px`;
+    mwOverlay.style.opacity = '0';
+    
+    mwImage.src = '';
+    mwImage.style.opacity = '0';
+
+    mwContainer.style.width = `0px`;
+    mwContainer.style.height = `0px`;
 }
 
 // addEventListener
-testBtn.addEventListener('click', clickEvent)
-mwWrapper.addEventListener('click',clickCloseEvent)
+mwOverlay.addEventListener('click',clickCloseEvent)
 dateMw.forEach(element => {
     element.addEventListener('click', getImage)
+    element.addEventListener('click', clickEvent)
 });

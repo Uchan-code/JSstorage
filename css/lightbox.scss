@@ -4,7 +4,8 @@
     left: 0;
 }
 
-.mw-wrapper{
+.mw-overlay{
+    position: absolute;
     width: 0px;
     height: 0px;
 
@@ -16,9 +17,30 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+
+    z-index: 998;
 }
 
 .mw-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        animation: fadeIn 0.8s;
+        animation-delay: 1.5s;
+        animation-fill-mode: both;
+        z-index: 999;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -26,3 +48,4 @@
 
 /*メモ
 1.モーダルウィンドウ欄とイメージ欄は別にしないとイメージもopacity:0.8になる
+*/
