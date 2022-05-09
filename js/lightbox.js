@@ -18,8 +18,16 @@ function clickEvent(){
     mwOverlay.style.height = `${windowInnerHeight}px`;
     mwOverlay.style.opacity = '0.8';    // opacityの変更
 
+    
     mwContainer.style.width = `${windowInnerWidth}px`;
-    mwContainer.style.height = `${windowInnerHeight}px`
+    mwContainer.style.height = `${windowInnerHeight}px`;
+
+    setTimeout(function(){
+        mwImage.style.opacity = '1';
+    },1000)
+    setTimeout(function(){
+        mwImage.style.transition = '0s';
+    },2500)
 }
 
 function getImage(element){
@@ -50,6 +58,8 @@ function clickCloseEvent(){
 // addEventListener
 mwOverlay.addEventListener('click',clickCloseEvent)
 dateMw.forEach(element => {
-    element.addEventListener('click', getImage)
     element.addEventListener('click', clickEvent)
+    element.addEventListener('click', getImage)
 });
+
+// swipイベント

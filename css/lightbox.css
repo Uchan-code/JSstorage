@@ -41,31 +41,12 @@
 }
 
 .mw-container img {
-  -webkit-animation: fadeIn 0.8s;
-          animation: fadeIn 0.8s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
   z-index: 999;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  opacity: 0;
+  border: 10px #ffffff solid;
+  border-radius: 10px;
 }
 
 /*メモ
