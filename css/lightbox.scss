@@ -26,6 +26,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
     img{
         transition: 1.5s ease;
@@ -33,6 +35,8 @@
         opacity: 0;
         border: 10px #ffffff solid;
         border-radius: 10px;
+        position: absolute;
+        top: 3vw;
     }
 }
 

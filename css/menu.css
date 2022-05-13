@@ -1,0 +1,115 @@
+.menu li {
+  list-style: none;
+}
+
+.menu-wrapper {
+  display: -ms-grid;
+  display: grid;
+  height: 300px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.dot-inner {
+  background-color: #000000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 3px solid red;
+  z-index: 999;
+}
+
+.dot-icon {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dot-icon span {
+  border-radius: 50%;
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: #ffffff;
+  margin: 0.2em;
+}
+
+.dot-outer {
+  background-color: #000000;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  visibility: hidden;
+}
+
+.dot-outer__list {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.dot-outer__list li {
+  color: red;
+  font-size: 2.5rem;
+}
+
+.accordion-list {
+  padding: 0;
+}
+
+.accordion-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accordion-togglebutton {
+  width: 30px;
+  height: 30px;
+}
+
+.angle-down {
+  position: relative;
+  top: -2px;
+  left: 1px;
+}
+
+.angle-down span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: #000000 3px solid;
+  border-right: #000000 3px solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=menu.css.map */

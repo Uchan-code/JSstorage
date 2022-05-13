@@ -7,6 +7,7 @@
     <title>JSの保管庫</title>
     <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 <body>
     <!-- Header -->
@@ -27,10 +28,75 @@
             </div>
         </div>
 
+        <!-- ButtonMenuいろいろ -->
+        <div class="menu">
+            <div class="menu-wrapper">
+
+                <div class="dot">
+                    <div class="dot-inner">
+                        <i class="dot-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </i>
+                    </div>
+
+                    <div class="dot-outer">
+                        <ul class="dot-outer__list">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="accordion">
+                    <div class="accordion-wrapper">
+                        <ul class="accordion-list">
+                            <li>
+                                <div class="accordion-header">
+                                    <h3>アコーディオンメニュー①</h3>
+                                    <button class="accordion-togglebutton">
+                                        <i class="angle-down">
+                                            <span></span>
+                                        </i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion-header">
+                                    <h3>アコーディオンメニュー②</h3>
+                                    <button class="accordion-togglebutton">
+                                        <i class="angle-down">
+                                            <span></span>
+                                        </i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion-header">
+                                    <h3>アコーディオンメニュー③</h3>
+                                    <button class="accordion-togglebutton">
+                                        <i class="angle-down">
+                                            <span></span>
+                                        </i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                <div></div>
+            </div>
+
+        </div>
+
     </div>
 
     <button class="test-button">テストボタン</button>
 
+
+    <!-- モーダルウィンドウなのでmain外 -->
     <div class="mw" id="modalwindow">
         <div class="mw-overlay"></div>
 
@@ -42,6 +108,8 @@
         </div>
 
     </div>
+
+    
 
     <!-- Footer -->
     <footer>
